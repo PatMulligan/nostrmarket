@@ -7,14 +7,14 @@
         <q-card-section>
           <div class="row">
             <div class="col-4">
-              <merchant-details
+              <merchant-dropdown
                 :merchant-id="merchant.id"
                 :inkey="g.user.wallets[0].inkey"
                 :adminkey="g.user.wallets[0].adminkey"
                 :show-keys="showKeys"
                 @toggle-show-keys="toggleShowKeys"
                 @merchant-deleted="handleMerchantDeleted"
-              ></merchant-details>
+              ></merchant-dropdown>
             </div>
             <div class="col-6">
               <q-toggle
@@ -240,7 +240,7 @@
 <script src="{{ url_for('nostrmarket_static', path='components/stall-list/stall-list.js') }}"></script>
 <script src="{{ url_for('nostrmarket_static', path='components/order-list/order-list.js') }}"></script>
 <script src="{{ url_for('nostrmarket_static', path='components/direct-messages/direct-messages.js') }}"></script>
-<script src="{{ url_for('nostrmarket_static', path='components/merchant-details/merchant-details.js') }}"></script>
+<script src="{{ url_for('nostrmarket_static', path='components/merchant-dropdown/merchant-dropdown.js') }}"></script>
 <script src="{{ url_for('nostrmarket_static', path='js/index.js') }}"></script>
 
 {% endblock %}
